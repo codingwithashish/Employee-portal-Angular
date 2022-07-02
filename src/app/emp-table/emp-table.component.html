@@ -1,0 +1,49 @@
+<div class="container pt-5">
+  <table class="table employee-table">
+    <thead class="bg-dark text-white">
+      <tr>
+        <th scope="col">S.no</th>
+        <th scope="col">Name</th>
+        <th scope="col">Domain</th>
+        <th scope="col">Age</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Address</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of emprecords; trackBy:getTrack let indexnum = index">
+        <td>{{indexnum + 1}}</td>
+        <td>{{item.empname | uppercase}}</td>
+        <td>{{item.empdomain | uppercase }}</td>
+        <td>{{item.empAge}}</td>
+        <td>{{item.Salary | currency: 'INR'}}</td>
+        <td>{{item.empAddress}}</td>
+        <td>
+            <a href="#" class="me-2 text-primary"> <i class="bi bi-eye-fill"></i> </a>
+            <a href="#" class="text-danger"> <i class="bi bi-trash-fill"></i> </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div aria-label="Page navigation example">
+    <ul class="pagination text-center">
+      <li class="page-item m-auto"><a (click)="loadMoreData()" class="page-link" href="#">Load More</a></li>
+    </ul>
+  </div> 
+
+  <!-- <select (change)="chnageColor($event)" >
+    <option>Select color</option>
+    <option value="red" >Red</option>
+    <option value="green">Green</option>
+    <option value="pink">Pink</option>
+    <option value="black">Black</option>
+  </select>
+  <div [ngSwitch]="choise">
+    <h1 *ngSwitchCase="'red'">Red color Selected</h1>
+    <h1 *ngSwitchCase="'green'">Green color Selected</h1>
+    <h1 *ngSwitchCase="'pink'">Pink color Selected</h1>
+    <h1 *ngSwitchCase="'black'">Black color Selected</h1>
+    <h1 *ngSwitchDefault>No color selected</h1>
+  </div> -->
+</div>

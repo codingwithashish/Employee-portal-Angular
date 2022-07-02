@@ -1,0 +1,80 @@
+<header class="navbar-light bg-light">
+  <nav class="container navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <h2><a class="navbar-brand" routerLink="/"> ADMIN PORTAL </a></h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-lg-0">
+
+          <li class="nav-item h-auto me-3">
+            <input type="text" #search (keyup)="mytext()" class="form-control me-4 h-100"
+              placeholder="Search Employee Here">
+          </li>
+          <!-- {{inputtext}} -->
+          <li class="nav-item me-3">
+            <a class="nav-link btn btn-danger text-white px-4" href="#" data-bs-toggle="modal"
+              data-bs-target="#exampleModal"> <i class="bi bi-plus-lg"></i> ADD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-danger text-white px-4" routerLink="/login" routerLinkActive="active"><i
+                class="bi bi-box-arrow-in-right"></i> Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form #contactForm="ngForm" (ngSubmit)="formSubmit(contactForm)">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">ADD NEW EMPLOYEE</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Employee Name</label>
+            <input class="form-control" name="name" id="exampleFormControlTextarea1" ngModel />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"> Employee Domain</label>
+            <select class="form-control" required  name="domain" ngModel>
+              <option value="">Frontend</option>
+              <option value="">Backend Developer</option>
+              <option value="">UI/UX Designer</option>
+              <option value="">Quality Assurance</option>
+              <option value="">Angular Developer</option>
+              <option value="">React Developer</option>
+              <option value="">Mobile Developer</option>
+              <option value="">Project Cordinator</option>
+              <option value="">Network & Support Engineer</option>
+              <option value="">Wordpress Developer</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Employee Age</label>
+            <input class="form-control" name="age" id="exampleFormControlTextarea1" ngModel />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Employee Salary</label>
+            <input class="form-control" name="salary" id="exampleFormControlTextarea1" ngModel />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Employee Address</label>
+            <textarea class="form-control" name="address" id="exampleFormControlTextarea1" rows="3" ngModel ></textarea>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="submit" name="submit" class="btn btn-danger">SUBMIT <i class="bi bi-arrow-right-circle-fill"></i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

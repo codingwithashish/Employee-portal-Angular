@@ -1,0 +1,24 @@
+.sidebar{
+    position: fixed;
+    display: inline-block;
+    padding: 15px;
+    height: 100vh;
+}
+
+.sidebar ul li{
+    background-color: #000000;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a{
+    color: #ffffff;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: inline-block;
+    font-size: 1.125rem;
+    letter-spacing: 0.5px;
+}
+.sidebar ul li i{
+    color: #ffffff;
+}

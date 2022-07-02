@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <div class="row" *ngIf="isuserLogin else logedout">
+    <div class="col-md-4" *ngFor="let item of productdetails">
+      <div class="card">
+        <img src={{item.productimg}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> {{item.productName}} </h5>
+          <p class="card-text"> {{item.desc}} </p>
+          <div class="d-flex justify-content-between">
+            <a href="#" class="btn btn-primary"> <i class="bi bi-cart3"></i> CART </a>
+            <a href="#" class="btn btn-primary"> BUY NOW</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #logedout>
+    <div class="col-md-12 text-center" >
+      <h3>Please login </h3>
+    </div>
+  </ng-template>
+</div>
+
+
+
