@@ -17,6 +17,7 @@ export class EmpTableComponent implements OnInit {
       empname: 'Brady Ashish',
       empdomain: 'Angular Developer',
       empAge: 23,
+      gender: 'Male',
       Salary: 10000,
       empAddress: 'Visthapit Rishikesh Uttarakhand'
     },
@@ -24,6 +25,7 @@ export class EmpTableComponent implements OnInit {
       empname: 'Jason Harse',
       empdomain: 'Project Cordinator',
       empAge: 27,
+      gender: 'Male',
       Salary: 350000,
       empAddress: 'Haldwani Uttarakhand'
     },
@@ -31,6 +33,7 @@ export class EmpTableComponent implements OnInit {
       empname: 'Alex Anshuman',
       empdomain: 'Frontend',
       empAge: 22,
+      gender: 'Male',
       Salary: 40000,
       empAddress: 'Haridwar Uttarakhand'
     },
@@ -38,6 +41,7 @@ export class EmpTableComponent implements OnInit {
       empname: 'Preston Ujjwal',
       empdomain: 'Wordpress Developer',
       empAge: 24,
+      gender: 'Male',
       Salary: 350000,
       empAddress: 'Saharanpur'
     }
@@ -50,6 +54,7 @@ export class EmpTableComponent implements OnInit {
         empname: 'Brady Ashish',
         empdomain: 'Angular Developer',
         empAge: 23,
+        gender: 'Male',
         Salary: 10000,
         empAddress: 'Visthapit Rishikesh Uttarakhand'
       },
@@ -57,6 +62,7 @@ export class EmpTableComponent implements OnInit {
         empname: 'Jason Harse',
         empdomain: 'Project Cordinator',
         empAge: 27,
+        gender: 'Male',
         Salary: 350000,
         empAddress: 'Haldwani Uttarakhand'
       },
@@ -64,6 +70,7 @@ export class EmpTableComponent implements OnInit {
         empname: 'Alex Anshuman',
         empdomain: 'Frontend',
         empAge: 22,
+        gender: 'Male',
         Salary: 40000,
         empAddress: 'Haridwar Uttarakhand'
       },
@@ -71,6 +78,7 @@ export class EmpTableComponent implements OnInit {
         empname: 'Preston Ujjwal',
         empdomain: 'Wordpress Developer',
         empAge: 24,
+        gender: 'Male',
         Salary: 350000,
         empAddress: 'Saharanpur'
       },
@@ -78,6 +86,7 @@ export class EmpTableComponent implements OnInit {
         empname: 'Vince vijay',
         empdomain: 'Mobile Developer',
         empAge: 23,
+        gender: 'Male',
         Salary: 310000,
         empAddress: 'IDPL Rishikesh Uttarakhand'
       },
@@ -85,6 +94,7 @@ export class EmpTableComponent implements OnInit {
         empname: 'Zach Vaibhav',
         empdomain: 'Network & Support Engineer',
         empAge: 24,
+        gender: 'Male',
         Salary: 230000,
         empAddress: ' Rishikul Haridwar Uttarakhand'
       },
@@ -92,6 +102,7 @@ export class EmpTableComponent implements OnInit {
         empname: 'Kendrick Kashish',
         empdomain: 'UI/UX Designer',
         empAge: 25,
+        gender: 'Male',
         Salary: 400000,
         empAddress: 'Shivalik Nagar Haridwar Uttarakhand'
       },
@@ -99,6 +110,7 @@ export class EmpTableComponent implements OnInit {
         empname: 'Denver Manik',
         empdomain: 'Frontend Developer',
         empAge: 22,
+        gender: 'Male',
         Salary: 100000,
         empAddress: 'Shivalik Nagar Haridwar Uttarakhand'
       },
@@ -106,6 +118,7 @@ export class EmpTableComponent implements OnInit {
         empname: 'Harisson Harshit',
         empdomain: 'Frontend Developer',
         empAge: 22,
+        gender: 'Male',
         Salary: 100000,
         empAddress: 'Shivalik Nagar Haridwar Uttarakhand'
       }

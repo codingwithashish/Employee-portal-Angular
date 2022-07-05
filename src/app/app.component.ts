@@ -1,5 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -19,9 +20,12 @@ export class AppComponent implements OnInit {
   }
 
   getRoute() {
-    if (this.route.url == '/admin-profile' || this.route.url == '/logout' || this.route.url == '/timesheet' || this.route.url == '/report') {
+    if (this.route.url == '/logout') {
       return false
-    } else
+    } else {
       return true
+    }
+
   }
+
 }

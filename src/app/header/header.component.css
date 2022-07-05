@@ -1,0 +1,13 @@
+input.ng-touched.ng-invalid{
+    border: 1px solid #ff0000;
+}
+
+.error{
+    display: block;
+    padding: 5px 0;
+    font-size: 12px;
+    color: #ff0000;
+}
+input.ng-touched.ng-valid{
+    border: 1px solid #008000;
+}

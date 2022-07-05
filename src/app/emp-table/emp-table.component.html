@@ -6,6 +6,7 @@
         <th scope="col">Name</th>
         <th scope="col">Domain</th>
         <th scope="col">Age</th>
+        <th scope="col">Gender</th>
         <th scope="col">Salary</th>
         <th scope="col">Address</th>
         <th scope="col">Action</th>
@@ -15,8 +16,9 @@
       <tr *ngFor="let item of emprecords; trackBy:getTrack let indexnum = index">
         <td>{{indexnum + 1}}</td>
         <td>{{item.empname | uppercase}}</td>
-        <td>{{item.empdomain | uppercase }}</td>
-        <td>{{item.empAge}}</td>
+        <td>{{item.empdomain}}</td>
+        <td>{{item.empAge}} yr</td>
+        <td>{{item.gender}}</td>
         <td>{{item.Salary | currency: 'INR'}}</td>
         <td>{{item.empAddress}}</td>
         <td>
