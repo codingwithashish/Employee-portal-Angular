@@ -10,10 +10,14 @@ import { EmpdataService } from '../empdata.service';
 
 export class EmpTableComponent implements OnInit {
   empdatarecord: any = [];
+  loader: boolean = false;
   constructor(private empdata: EmpdataService) {
+    this.loader = true
     this.empdata.getempdata().subscribe(data => {
-      this.empdatarecord = data;
-      console.log(this.empdatarecord);
+      if (data) {
+        this.loader = false;
+        this.empdatarecord = data;
+      }
     });
 
   }
