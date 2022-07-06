@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -8,7 +8,9 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor() { }
+  // constructor() { }
+
+
 
   ngOnInit(): void {
   }
@@ -23,5 +25,21 @@ export class RegistrationComponent implements OnInit {
     let username = data.name;
     alert(`Name : ${data.name} Age: ${data.email}`)
   }
+
+  // Using form builder
+  // registrationForm: FormGroup;
+  // constructor(private formbuilder: FormGroup) {
+
+  //   this.registrationForm = this.formbuilder.group({
+  //     name: [''],
+  //     email: [''],
+  //     password: [''],
+  //   })
+  // }
+
+  // formSubmit(data: any) {
+  //   let username = data.name;
+  //   alert(`Name : ${data.name} Age: ${data.email}`)
+  // }
 
 }

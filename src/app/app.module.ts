@@ -13,6 +13,7 @@ import { RegistrationComponent } from './admin/registration/registration.compone
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegistrationComponent,
     NotFoundComponent,
     SidebarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
