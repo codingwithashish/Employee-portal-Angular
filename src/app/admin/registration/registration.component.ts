@@ -15,16 +15,16 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  registrationForm = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
-  })
+  // registrationForm = new FormGroup({
+  //   name: new FormControl(''),
+  //   email: new FormControl(''),
+  //   password: new FormControl(''),
+  // })
 
-  formSubmit(data: any) {
-    let username = data.name;
-    alert(`Name : ${data.name} Age: ${data.email}`)
-  }
+  // formSubmit(data: any) {
+  //   let username = data.name;
+  //   alert(`Name : ${data.name} Age: ${data.email}`)
+  // }
 
   // Using form builder
   // registrationForm: FormGroup;
