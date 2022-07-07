@@ -27,11 +27,20 @@
     </tbody>
   </table>
   <div *ngIf="loader" class="w-100 h-100 text-center" role="status">
-    <span class=" spinner-border sr-only"></span>
+    <span class="spinner-border"></span>
+    <span class="d-block">Loading</span>
   </div>
-  <div aria-label="Page navigation example">
-    <ul class="pagination text-center">
-      <!-- <li class="page-item m-auto"><a routerLink="/employee-table" class="page-link">Load More</a></li> -->
-    </ul>
-  </div>
+  <ul *ngIf="pagination" class="pagination d-flex justify-content-end">
+    <li class="page-item disabled">
+      <span class="page-link">Prev</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active" aria-current="page">
+      <span class="page-link">2</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
 </div>

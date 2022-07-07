@@ -10,8 +10,7 @@
         <ul class="navbar-nav ms-auto mb-lg-0">
 
           <li class="nav-item h-auto me-3">
-            <input type="text" #search (keyup)="mytext()" class="form-control me-4 h-100"
-              placeholder="Search Employee Here">
+            <input type="text" class="form-control me-4 h-100" placeholder="Search Employee Here">
           </li>
           <!-- {{inputtext}} -->
           <li class="nav-item me-3">
@@ -40,14 +39,15 @@
         <div class="modal-body">
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Employee Name</label>
-            <input class="form-control" name="name" #empname="ngModel" required id="exampleFormControlTextarea1" ngModel />
+            <input class="form-control" name="name" #empname="ngModel" required id="exampleFormControlTextarea1"
+              ngModel />
             <span class="error" *ngIf="empname.invalid && empname.touched ">
               Please enter your name *
             </span>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label"> Employee Domain</label>
-            <select class="form-control" required  name="domain" ngModel>
+            <select class="form-control" required name="domain" ngModel>
               <option value="">Select Domain</option>
               <option *ngFor="let domain of selectdomain" [value]="domain">{{domain}}</option>
             </select>
@@ -58,7 +58,7 @@
           </div>
           <div class="mb-3">
             <span *ngFor="let gender of genders">
-              <input  type="radio"  [value]="gender" required name="gender" ngModel />  {{gender}}
+              <input type="radio" [value]="gender" required name="gender" ngModel /> {{gender}}
             </span>
           </div>
           <div class="mb-3">
@@ -67,12 +67,15 @@
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Employee Address</label>
-            <textarea class="form-control" name="address" required id="exampleFormControlTextarea1" rows="3" ngModel ></textarea>
+            <textarea class="form-control" name="address" required id="exampleFormControlTextarea1" rows="3"
+              ngModel></textarea>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" (click)="addnewEmpForm.reset()">RESET <i class="bi bi-arrow-clockwise"></i> </button>
-          <button type="submit" name="submit" [disabled]="addnewEmpForm.invalid" class="btn btn-success">SUBMIT <i class="bi bi-arrow-right-circle-fill"></i></button>
+          <button type="button" class="btn btn-danger" (click)="addnewEmpForm.reset()">RESET <i
+              class="bi bi-arrow-clockwise"></i> </button>
+          <button type="submit" name="submit" [disabled]="addnewEmpForm.invalid" class="btn btn-success">SUBMIT <i
+              class="bi bi-arrow-right-circle-fill"></i></button>
         </div>
       </form>
     </div>

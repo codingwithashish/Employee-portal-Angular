@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EmpTableComponent } from './emp-table/emp-table.component';
-import { LoginComponent } from './admin/login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { RegistrationComponent } from './admin/registration/registration.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'employee-table', component: EmpTableComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegistrationComponent },
+  // { path: 'employee-table', component: EmpTableComponent },
+  { path: 'employee-table', loadChildren: () => import('./emp-table/emp-table.module').then(m => m.EmpTableModule) },
+  // { path: 'login', component: LoginComponent },
+  { path: 'login', loadChildren: () => import('./admin/login/login.module').then(m => m.LoginModule) },
+
+  // { path: 'register', component: RegistrationComponent },
+  { path: 'register', loadChildren: () => import('./admin/registration/registration.module').then(m => m.RegistrationModule) },
+
   { path: '**', component: NotFoundComponent }
 ];
 

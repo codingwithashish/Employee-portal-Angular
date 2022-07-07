@@ -2,11 +2,18 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
 import { UserdataService } from './userdata.service';
+
+interface EmployeeInterface {
+  name: string,
+  age: number,
+  domain: string
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit {
   title = 'Admin Employee Portal';
   url: any;
@@ -24,6 +31,14 @@ export class AppComponent implements OnInit {
       return false
     } else {
       return true
+    }
+  }
+
+  getempdata() {
+    let emprecods: EmployeeInterface = {
+      name: ' ',
+      age: 24,
+      domain: 'FE'
     }
   }
 }

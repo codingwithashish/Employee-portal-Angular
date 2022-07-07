@@ -10,23 +10,17 @@ import { EmpdataService } from '../empdata.service';
 
 export class EmpTableComponent implements OnInit {
   empdatarecord: any = [];
-  loader: boolean = false;
+  loader: boolean = true;
+  pagination: boolean = false;
   constructor(private empdata: EmpdataService) {
-    this.loader = true
     this.empdata.getempdata().subscribe(data => {
       if (data) {
         this.loader = false;
+        this.pagination = true;
         this.empdatarecord = data;
       }
     });
-
   }
   ngOnInit(): void {
   }
-
-  choise = "";
-  chnageColor(data: any) {
-    this.choise = data.target.value;
-  }
-
 }
