@@ -1,6 +1,5 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormGroup, FormControl } from '@angular/forms';
 import { UserdataService } from './userdata.service';
 
 interface EmployeeInterface {
