@@ -13,6 +13,8 @@ const routes: Routes = [
   // { path: 'register', component: RegistrationComponent },
   { path: 'registration', loadChildren: () => import('./admin/registration/registration.module').then(m => m.RegistrationModule) },
 
+  { path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule) },
+
   { path: '**', component: NotFoundComponent }
 ];
 

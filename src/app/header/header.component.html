@@ -53,13 +53,25 @@
             <input class="form-control" name="age" ngModel required id="exampleFormControlTextarea1" />
           </div>
           <div class="mb-3">
-            <span *ngFor="let gender of genders">
-              <input type="radio" [value]="gender" ngModel required name="gender" /> {{gender}}
-            </span>
+            <label for="joingdateid" class="form-label">Joining Date</label>
+            <input type="date" class="form-control" name="salary" ngModel required id="joingdateid" />
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Employee Salary</label>
-            <input class="form-control" name="salary" ngModel required id="exampleFormControlTextarea1" />
+            <input type="number" class="form-control" name="salary" ngModel required id="exampleFormControlTextarea1" />
+          </div>
+          <div class="mb-3" *ngIf="profile !== '' ">
+            <img src={{profile}} style="max-width:100px;" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Upload Photo</label>
+            <input type="file" class="form-control" (change)="changeFile($event)" name="emp-image" ngModel required
+              id="exampleFormControlTextarea1" />
+          </div>
+          <div class="mb-3">
+            <span *ngFor="let gender of genders">
+              <input type="radio" [value]="gender" ngModel required name="gender" /> {{gender}}
+            </span>
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Employee Address</label>
