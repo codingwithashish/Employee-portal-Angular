@@ -21,4 +21,16 @@ export class HeaderComponent implements OnInit {
   FormSubmit(data: any) {
     alert(data.controls.name.value);
   }
+
+  profile: any = '';
+
+  changeFile(event: any) {
+    if (event.target.files) {
+      let reader = new FileReader();
+      reader.readAsDataURL(event.target.files[0]);
+      reader.onload = (event: any) => {
+        this.profile = event.target.result;
+      }
+    }
+  }
 }

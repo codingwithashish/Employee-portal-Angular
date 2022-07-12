@@ -10,6 +10,11 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    let logindetails = {
+      name: 'Ashsih',
+      password: '12345'
+    }
+    localStorage.setItem('username', JSON.stringify(logindetails));
   }
 
 }

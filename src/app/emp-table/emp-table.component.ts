@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmpdataService } from '../empdata.service';
 
+
 @Component({
   selector: 'app-emp-table',
   templateUrl: './emp-table.component.html',
@@ -8,8 +9,11 @@ import { EmpdataService } from '../empdata.service';
   providers: [EmpdataService],
 })
 
+
+
 export class EmpTableComponent implements OnInit {
   empdatarecord: any = [];
+  data: any = '';
   loader: boolean = true;
   pagination: boolean = false;
   constructor(private empdata: EmpdataService) {

@@ -3,23 +3,24 @@
     <div class="card-header bg-dark text-white">
       <h5 class="modal-title">ADMIN REGISTRATION</h5>
     </div>
+    <!-- <form action="" [FormGroup]="RegistrationForm" (ngSubmit)="formSubmit(RegistrationForm.value)"> -->
     <form action="">
       <div class="card-body">
         <div class="mb-3">
           <label for="example" class="form-label">Name</label>
-          <input type="text" value="" name="name" class="form-control" ngModel />
+          <input type="text" value="" FormControlName="name" class="form-control" />
         </div>
         <div class="mb-3">
           <label for="example" class="form-label">Email</label>
-          <input type="email" value="" name="email" class="form-control" ngModel />
+          <input type="email" value="" FormControlName="email" class="form-control" />
         </div>
         <div class="mb-3">
           <label for="example" class="form-label">Password</label>
-          <input type="text" value="" name="password" class="form-control" ngModel />
+          <input type="password" value="" FormControlName="password" class="form-control" />
         </div>
         <div class="mb-3">
           <label for="example" class="form-label">Confirm Password</label>
-          <input type="text" value="" name="cpassword" class="form-control" ngModel />
+          <input type="password" value="" name="cpassword" class="form-control" />
         </div>
         <a class="text-decoration-none" routerLink="/login">Login Here</a>
       </div>

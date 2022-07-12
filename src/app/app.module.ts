@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { UseraddressService } from './useraddress.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './home/home.module';
+import { NgxPaginationModule } from 'ngx-pagination'
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { HomeModule } from './home/home.module';
     ReactiveFormsModule,
     HttpClientModule,
     HomeModule,
+    NgxPaginationModule
   ],
   providers: [UseraddressService],
   bootstrap: [AppComponent]
